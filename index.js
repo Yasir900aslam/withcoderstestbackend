@@ -5,7 +5,10 @@ const { typeDefs } = require("./typeDefs");
 const { resolvers } = require("./resolvers");
 
 const server = new ApolloServer({
-  cors: false,
+  cors: {
+		origin: '*',			// <- allow request from all domains
+		credentials: true
+  }
   typeDefs,
   resolvers,
   introspection: true,
