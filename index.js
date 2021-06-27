@@ -7,7 +7,7 @@ const { resolvers } = require("./resolvers");
 const server = new ApolloServer({
   cors: {
 		origin: '*',			// <- allow request from all domains
-  }
+  },
   typeDefs,
   resolvers,
   introspection: true,
