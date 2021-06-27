@@ -6,7 +6,7 @@ const { resolvers } = require("./resolvers");
 
 const server = new ApolloServer({
   cors: {
-		origin: 'https://with-coders-test.vercel.app/',			// <- allow request from all domains [Risky but fast]
+		origin: '*',			// <- allow request from all domains [Risky but fast]
   },
   typeDefs,
   resolvers,
